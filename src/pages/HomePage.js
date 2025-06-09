@@ -1,7 +1,6 @@
 import React from 'react';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
-import ExportarAdquisiciones from '../components/ExportarAdquisiciones';
 
 const servicios = [
   { id: 1, nombre: 'Sesiones para eventos', descripcion: 'Cobertura fotográfica profesional para todo tipo de eventos.' },
@@ -26,7 +25,6 @@ const HomePage = () => {
         <h1>Bienvenidos a HR ESTUDIO FOTOGRAFIA</h1>
         <p>Somos un estudio especializado en capturar tus mejores momentos y potenciar tu marca con servicios profesionales de fotografía, video y marketing digital. Explora nuestro catálogo de productos y descubre cómo podemos ayudarte a destacar.</p>
       </div>
-      <ExportarAdquisiciones />
       <div className="recent-pages">
         <h2>Servicios Existentes</h2>
         <div className="pages-grid">
