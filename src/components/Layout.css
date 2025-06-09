@@ -11,9 +11,16 @@
   min-height: 100vh;
 }
 
+/* Cuando no hay sidebar, quitar el margen */
+@media (min-width: 769px) {
+  .main-content[style*="margin-left: 0"] {
+    margin-left: 0 !important;
+  }
+}
+
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
     padding-top: 60px;
   }
-} 
+}
