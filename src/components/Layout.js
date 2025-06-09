@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import './Layout.css';
 import { useLocation } from 'react-router-dom';
 
 const Layout = ({ children, pages }) => {
   const location = useLocation();
-  // Oculta el sidebar si la ruta es de producto
-  const hideSidebar = location.pathname.startsWith('/producto/');
+  const [sidebarVisible, setSidebarVisible] = useState(true);
+
+  // Oculta el sidebar automáticamente al entrar a un producto
+  React.useEffect(() => {
+    if (location.pathname.startsWith('/producto/')) {
+      setSidebarVisible(false);
+    } else {
+      setSidebarVisible(true);
+    }
+  }, [location.pathname]);
+
+  // Botón flotante para mostrar el sidebar
+  const showSidebarButton = !sidebarVisible && (
+    <button
+      className="sidebar-toggle-btn"
+      onClick={() => setSidebarVisible(true)}
+      aria-label="Mostrar menú"
+    >
+      <span style={{ fontSize: 28 }}>📑</span>
+    </button>
+  );
 
   return (
     <div className="layout">
-      {!hideSidebar && <Sidebar pages={pages} />}
-      <main className="main-content" style={hideSidebar ? { marginLeft: 0 } : {}}>
+      {sidebarVisible && <Sidebar pages={pages} onCloseSidebar={() => setSidebarVisible(false)} />}
+      <main className="main-content" style={sidebarVisible ? {} : { marginLeft: 0 }}>
+        {showSidebarButton}
         {children}
       </main>
     </div>
