@@ -19,7 +19,7 @@ const productos = [
   { id: 5, nombre: 'Promoción a productos' },
 ];
 
-const ADMIN_KEY = 'CARLOS15'; // Cambia esto por tu clave secreta
+const ADMIN_KEY = 'CARLOS123'; // Cambia esto por tu clave secreta
 
 function isAdmin() {
   // 1. Verifica si ya está en localStorage
