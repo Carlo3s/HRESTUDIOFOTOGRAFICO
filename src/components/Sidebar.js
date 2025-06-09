@@ -18,10 +18,23 @@ const productos = [
   { id: 5, nombre: 'Promoción a productos' },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ onCloseSidebar }) => {
   return (
     <div className="sidebar">
-      <h2>HR ESTUDIO FOTOGRAFICO</h2>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, position: 'relative' }}>
+        <span style={{ fontSize: 26 }}>📷</span>
+        <span style={{ fontWeight: 'bold', fontSize: 18, lineHeight: 1.1 }}>HR ESTUDIO<br/>FOTOGRAFICO</span>
+        {onCloseSidebar && (
+          <button
+            className="sidebar-toggle-btn"
+            style={{ position: 'absolute', top: 4, right: 0, left: 'auto', width: 32, height: 32, fontSize: 18, background: '#e0e0e0' }}
+            onClick={onCloseSidebar}
+            aria-label="Ocultar menú"
+          >
+            <span style={{ fontSize: 18 }}>✖️</span>
+          </button>
+        )}
+      </div>
       <ul>
         <li>
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
