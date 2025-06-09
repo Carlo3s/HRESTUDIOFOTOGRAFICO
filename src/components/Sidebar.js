@@ -38,7 +38,6 @@ const Sidebar = ({ onCloseSidebar }) => {
   return (
     <div className="sidebar">
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, position: 'relative' }}>
-        <img src="/favicon.ico" alt="Logo" style={{ width: 28, height: 28, borderRadius: 4 }} />
         <span style={{ fontWeight: 'bold', fontSize: 18, lineHeight: 1.1 }}>HR ESTUDIO FOTOGRAFICO</span>
         {typeof onCloseSidebar === 'function' && (
           <button
