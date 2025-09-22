@@ -4,14 +4,11 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import CreatePage from './pages/CreatePage';
 import ViewPage from './pages/ViewPage';
-import SesionesEventos from './pages/SesionesEventos';
-import VideosDrone from './pages/VideosDrone';
-import SesionEstudio from './pages/SesionEstudio';
-import MarketingDigital from './pages/MarketingDigital';
-import PromocionProductos from './pages/PromocionProductos';
+import ManglarVerde from './pages/ManglarVerde';
+import ManglarBlanco from './pages/ManglarBlanco';
+import ManglarRojo from './pages/ManglarRojo';
 import initialPages from './data/pages.json';
 import './App.css';
-import ManglarVerde from './pages/ManglarVerde';
 
 function App() {
   const [pages, setPages] = useState(() => {
