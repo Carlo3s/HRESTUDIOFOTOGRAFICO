@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
 
-const SesionEstudio = () => {
+const ManglarRojo = () => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   return (
     <div style={{ background: '#ffe0b2', padding: 30, borderRadius: 8, minHeight: 400 }}>
