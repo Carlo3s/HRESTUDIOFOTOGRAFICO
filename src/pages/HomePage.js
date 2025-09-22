@@ -31,7 +31,7 @@ Especialistas en:
   src="/baner.png"
   alt="Bienvenidos a Cangrejito Creativo 360, tu nueva agencia 360 nacida en el paraíso para hacer brillar tu marca."
   width="900"
-  height="600"
+  height="400"
 />
       </div>
       <div className="recent-pages">
