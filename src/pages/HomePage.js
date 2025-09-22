@@ -3,16 +3,15 @@ import './HomePage.css';
 import { Link } from 'react-router-dom';
 
 const servicios = [
-  { id: 1, nombre: 'Manglar Verde', descripcion: 'Paquete quincenal para tu negocio.' },
-  { id: 2, nombre: 'Manglar Blanco', descripcion: 'Videos aéreos de alta calidad con drone para eventos y promociones.' },
-    { id: 3, nombre: 'Manglar Rojo', descripcion: 'Sesiones fotográficas en estudio con iluminación profesional.' },
-  ];
-  
+  { id: 1, nombre: 'Manglar Verde', descripcion: 'Producto ecológico de alta calidad, ideal para proyectos sustentables.' },
+  { id: 2, nombre: 'Manglar Blanco', descripcion: 'Producto premium para soluciones ambientales y paisajismo.' },
+  { id: 3, nombre: 'Manglar Rojo', descripcion: 'Producto resistente, perfecto para restauración de ecosistemas.' },
+];
 
 const iconos = [
-  '🌳', // Manglar Verde
-  '🌳', // Manglar Blanco
-  '🌳', // Manglar Rojo
+  '🟩', // Manglar Verde
+  '⬜', // Manglar Blanco
+  '🟥', // Manglar Rojo
 
 ];
 
