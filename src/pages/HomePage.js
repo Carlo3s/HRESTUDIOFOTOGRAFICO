@@ -28,7 +28,7 @@ Especialistas en:
 ✅ Activaciones de negocio que enamoran
 ✅ Formatos digitales innovadores hechos a medida</p>
         <img
-          src="baner.png"
+          src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\src\baner.png"
           alt=" Bienvenidos a Cangrejito Creativo 360, tu nueva agencia 360 nacida en el paraíso para hacer brillar tu marca."
           width="500"
           height="600"
