@@ -8,7 +8,7 @@ const ManglarVerde = () => {
       <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
         <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Manglar Verde" style={{ width: 350, height: 250, objectFit: 'cover', borderRadius: 8, marginRight: 30, marginBottom: 20 }} />
         <div style={{ flex: 1, minWidth: 250 }}>
-          <h2 style={{ textAlign: 'center', fontWeight: 'bold', marginBottom: 20 }}>SESIONES PARA EVENTOS</h2>
+          <h2 style={{ textAlign: 'center', fontWeight: 'bold', marginBottom: 20 }}>Manglar Verde</h2>
           <p style={{ fontSize: 22, textAlign: 'justify', marginBottom: 30 }}>
             Incluye:
 
