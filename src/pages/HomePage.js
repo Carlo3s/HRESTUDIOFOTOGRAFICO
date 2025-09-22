@@ -3,19 +3,16 @@ import './HomePage.css';
 import { Link } from 'react-router-dom';
 
 const servicios = [
-  { id: 1, nombre: 'Sesiones para eventos', descripcion: 'Cobertura fotográfica profesional para todo tipo de eventos.' },
-  { id: 2, nombre: 'Videos con drone', descripcion: 'Videos aéreos de alta calidad con drone para eventos y promociones.' },
-  { id: 3, nombre: 'Sesión de estudio', descripcion: 'Sesiones fotográficas en estudio con iluminación profesional.' },
-  { id: 4, nombre: 'Marketing digital', descripcion: 'Estrategias y contenido visual para potenciar tu marca en redes sociales.' },
-  { id: 5, nombre: 'Promoción a productos', descripcion: 'Fotografía y video para destacar y promocionar tus productos.' },
-];
+  { id: 1, nombre: 'Manglar Verde', descripcion: 'Cobertura fotográfica profesional para todo tipo de eventos.' },
+  { id: 2, nombre: 'Manglar Blanco', descripcion: 'Videos aéreos de alta calidad con drone para eventos y promociones.' },
+  { id: 3, nombre: 'Manglar Rojo', descripcion: 'Sesiones fotográficas en estudio con iluminación profesional.' },
+  
 
 const iconos = [
-  '📷', // Sesiones para eventos
-  '🚁', // Videos con drone
-  '🏢', // Sesión de estudio
-  '💻', // Marketing digital
-  '🛒', // Promoción a productos
+  '🌳', // Manglar Verde
+  '🌳', // Manglar Blanco
+  '🌳', // Manglar Rojo
+
 ];
 
 const HomePage = () => {
@@ -30,7 +27,7 @@ Especialistas en:
 ✅ Estrategias digitales (marketing + community manager)
 ✅ Activaciones de negocio que enamoran
 ✅ Formatos digitales innovadores hechos a medida</p>
-<img src="baner.png" alt="Descripción de la imagen"></img>
+<img src="src/baner.png" alt="Descripción de la imagen"></img>
       </div>
       <div className="recent-pages">
         <h2>Nuestros Servicios</h2>
