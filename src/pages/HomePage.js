@@ -22,8 +22,14 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <div className="welcome-section">
-        <h1>Bienvenidos a CANGREJITO CREATIVO 360</h1>
-        <p>Somos un estudio especializado en capturar tus mejores momentos y potenciar tu marca con servicios profesionales de fotografía, video y marketing digital. Explora nuestro catálogo de productos y descubre cómo podemos ayudarte a destacar.</p>
+        <h1>Bienvenidos a Cangrejito Creativo 360</h1>
+        <p>Tu nueva agencia 360° nacida en el paraíso para hacer brillar tu marca.
+Somos un equipo creativo con pinzas llenas de ideas 🦀✨
+Especialistas en:
+✅ Producción audiovisual profesional (videos, streaming, podcasts)
+✅ Estrategias digitales (marketing + community manager)
+✅ Activaciones de negocio que enamoran
+✅ Formatos digitales innovadores hechos a medida</p>
       </div>
       <div className="recent-pages">
         <h2>Servicios Existentes</h2>
