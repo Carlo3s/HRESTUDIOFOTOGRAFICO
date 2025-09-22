@@ -11,6 +11,7 @@ import MarketingDigital from './pages/MarketingDigital';
 import PromocionProductos from './pages/PromocionProductos';
 import initialPages from './data/pages.json';
 import './App.css';
+import ManglarVerde from './pages/ManglarVerde';
 
 function App() {
   const [pages, setPages] = useState(() => {
@@ -35,11 +36,9 @@ function App() {
         <Layout pages={pages}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/producto/1" element={<SesionesEventos />} />
-            <Route path="/producto/2" element={<VideosDrone />} />
-            <Route path="/producto/3" element={<SesionEstudio />} />
-            <Route path="/producto/4" element={<MarketingDigital />} />
-            <Route path="/producto/5" element={<PromocionProductos />} />
+            <Route path="/producto/1" element={<ManglarVerde />} />
+            <Route path="/producto/2" element={<ManglarBlanco />} />
+            <Route path="/producto/3" element={<ManglarRojo />} />
             <Route path="/create" element={<CreatePage onAddPage={handleAddPage} />} />
             <Route path="/page/:id" element={<ViewPage pages={pages} />} />
             <Route path="*" element={<Navigate to="/" replace />} />
