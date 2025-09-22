@@ -31,4 +31,4 @@ const ManglarRojo = () => {
   );
 };
 
-export default SesionEstudio;
+export default ManglarRojo;

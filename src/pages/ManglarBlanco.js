@@ -31,4 +31,4 @@ const ManglarBlanco = () => {
   );
 };
 
-export default VideosDrone;
+export default ManglarBlanco;
