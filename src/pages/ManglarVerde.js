@@ -10,8 +10,8 @@ const ManglarVerde = () => {
         <div style={{ flex: 1, minWidth: 250 }}>
           <h2 style={{ textAlign: 'center', fontWeight: 'bold', marginBottom: 20 }}>Manglar Verde</h2>
           <p style={{ fontSize: 22, textAlign: 'justify', marginBottom: 30 }}>
-            Incluye:
-
+            Incluye:   </p>
+ <p>
 ✅ Activación o transmisión streaming de tu negocio.
 
 📸 Fotografía profesional de producto o servicio (10 piezas).
