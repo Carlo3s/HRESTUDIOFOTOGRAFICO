@@ -23,16 +23,21 @@ const HomePage = () => {
         <p>Tu nueva agencia 360° nacida en el paraíso para hacer brillar tu marca.
 Somos un equipo creativo con pinzas llenas de ideas 🦀✨
 Especialistas en:
-✅ Producción audiovisual profesional (videos, streaming, podcasts)
+✅ Producción audiovisual profesional (videos, streaming, podcasts)<img
+  src="/baner.png"
+  alt="Bienvenidos a Cangrejito Creativo 360, tu nueva agencia 360 nacida en el paraíso para hacer brillar tu marca."
+  width="500"
+  height="600"
+/>
 ✅ Estrategias digitales (marketing + community manager)
 ✅ Activaciones de negocio que enamoran
 ✅ Formatos digitales innovadores hechos a medida</p>
         <img
-          src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\baner.png"
-          alt=" Bienvenidos a Cangrejito Creativo 360, tu nueva agencia 360 nacida en el paraíso para hacer brillar tu marca."
-          width="500"
-          height="600"
-        />
+  src="/baner.png"
+  alt="Bienvenidos a Cangrejito Creativo 360, tu nueva agencia 360 nacida en el paraíso para hacer brillar tu marca."
+  width="500"
+  height="600"
+/>
       </div>
       <div className="recent-pages">
         <h2>Nuestros Servicios</h2>
