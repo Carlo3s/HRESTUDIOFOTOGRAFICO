@@ -33,7 +33,7 @@ Especialistas en:
 <img src="baner.png" alt="Descripción de la imagen"></img>
       </div>
       <div className="recent-pages">
-        <h2>Servicios Existentes</h2>
+        <h2>Nuestros Servicios</h2>
         <div className="pages-grid">
           {servicios.map((servicio, idx) => (
             <div key={servicio.id} className="page-card">
