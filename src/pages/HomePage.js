@@ -27,7 +27,6 @@ Especialistas en:
 ✅ Estrategias digitales (marketing + community manager)
 ✅ Activaciones de negocio que enamoran
 ✅ Formatos digitales innovadores hechos a medida</p>
-<img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\src\baner.png" alt="Descripción de la imagen"></img>
       </div>
       <div className="recent-pages">
         <h2>Nuestros Servicios</h2>
