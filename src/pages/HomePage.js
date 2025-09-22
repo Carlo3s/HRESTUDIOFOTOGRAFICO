@@ -22,7 +22,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <div className="welcome-section">
-        <h1>Bienvenidos a HR ESTUDIO FOTOGRAFIA</h1>
+        <h1>Bienvenidos a CANGREJITO CREATIVO 360</h1>
         <p>Somos un estudio especializado en capturar tus mejores momentos y potenciar tu marca con servicios profesionales de fotografía, video y marketing digital. Explora nuestro catálogo de productos y descubre cómo podemos ayudarte a destacar.</p>
       </div>
       <div className="recent-pages">
