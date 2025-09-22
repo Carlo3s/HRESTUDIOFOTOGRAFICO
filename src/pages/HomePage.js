@@ -27,6 +27,12 @@ Especialistas en:
 ✅ Estrategias digitales (marketing + community manager)
 ✅ Activaciones de negocio que enamoran
 ✅ Formatos digitales innovadores hechos a medida</p>
+        <img
+          src="baner.png"
+          alt=" Bienvenidos a Cangrejito Creativo 360, tu nueva agencia 360 nacida en el paraíso para hacer brillar tu marca."
+          width="500"
+          height="600"
+        />
       </div>
       <div className="recent-pages">
         <h2>Nuestros Servicios</h2>
