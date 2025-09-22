@@ -3,7 +3,7 @@ import './HomePage.css';
 import { Link } from 'react-router-dom';
 
 const servicios = [
-  { id: 1, nombre: 'Manglar Verde', descripcion: 'Cobertura fotográfica profesional para todo tipo de eventos.' },
+  { id: 1, nombre: 'Manglar Verde', descripcion: 'Paquete quincenal para tu negocio.' },
   { id: 2, nombre: 'Manglar Blanco', descripcion: 'Videos aéreos de alta calidad con drone para eventos y promociones.' },
     { id: 3, nombre: 'Manglar Rojo', descripcion: 'Sesiones fotográficas en estudio con iluminación profesional.' },
   ];
