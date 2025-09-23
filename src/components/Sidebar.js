@@ -3,21 +3,9 @@ import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import ExportarAdquisiciones from './ExportarAdquisiciones';
 
-const iconos = [
-  '📷', // Sesiones para eventos
-  '🚁', // Videos con drone
-  '🏢', // Sesión de estudio
-  '💻', // Marketing digital
-  '🛒', // Promoción a productos
-];
 
-const productos = [
-  { id: 1, nombre: 'Sesiones para eventos' },
-  { id: 2, nombre: 'Videos con drone' },
-  { id: 3, nombre: 'Sesión de estudio' },
-  { id: 4, nombre: 'Marketing digital' },
-  { id: 5, nombre: 'Promoción a productos' },
-];
+
+
 
 const ADMIN_KEY = 'CARLOS123'; // Cambia esto por tu clave secreta
 
