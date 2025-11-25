@@ -25,22 +25,28 @@ const ManglarRojo = () => {
 
           <div className="servicio-card">
             <div className="servicio-card-left">
-              <h2>Máxima exposición y alcance</h2>
-              <p className="muted">Campañas con creador y contenido de gran volumen para escalado rápido.</p>
+              <div className="servicio-media">
+                <img src="/images/manglar-rojo.png" alt="Manglar Rojo" className="servicio-image" />
+              </div>
 
-              <ul className="features">
-                {caracteristicas.map((c, i) => (
-                  <li key={i}><span className="dot dot--red" />{c}</li>
-                ))}
-              </ul>
+              <div className="servicio-content">
+                <h2>Máxima exposición y alcance</h2>
+                <p className="muted">Campañas con creador y contenido de gran volumen para escalado rápido.</p>
 
-              <div className="card-actions">
-                <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
-                  {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
-                </button>
-                <button className="btn btn-solid btn-red" onClick={() => setMostrarFormulario(true)}>
-                  Adquirir — $4,000
-                </button>
+                <ul className="features">
+                  {caracteristicas.map((c, i) => (
+                    <li key={i}><span className="dot dot--red" />{c}</li>
+                  ))}
+                </ul>
+
+                <div className="card-actions">
+                  <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
+                    {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
+                  </button>
+                  <button className="btn btn-solid btn-red" onClick={() => setMostrarFormulario(true)}>
+                    Adquirir — $4,000
+                  </button>
+                </div>
               </div>
             </div>
 

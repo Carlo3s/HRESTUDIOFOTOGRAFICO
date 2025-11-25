@@ -25,29 +25,35 @@ const ManglarVerde = () => {
 
           <div className="servicio-card">
             <div className="servicio-card-left">
-              <h2>Perfecto para proyectos ecológicos</h2>
-              <p className="muted">Impulsa tu marca con contenido sostenible y alcance orgánico.</p>
+              <div className="servicio-media">
+                <img src="/images/manglar-verde.png" alt="Manglar Verde" className="servicio-image" />
+              </div>
 
-              <ul className="features">
-                {caracteristicas.map((c, i) => (
-                  <li key={i}><span className="dot dot--green" />{c}</li>
-                ))}
-              </ul>
+              <div className="servicio-content">
+                <h2>Perfecto para proyectos ecológicos</h2>
+                <p className="muted">Impulsa tu marca con contenido sostenible y alcance orgánico.</p>
 
-              <div className="card-actions">
-                <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
-                  {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
-                </button>
-                <button className="btn btn-solid btn-green" onClick={() => setMostrarFormulario(true)}>
-                  Adquirir — $1,600
-                </button>
+                <ul className="features">
+                  {caracteristicas.map((c, i) => (
+                    <li key={i}><span className="dot dot--green" />{c}</li>
+                  ))}
+                </ul>
+
+                <div className="card-actions">
+                  <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
+                    {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
+                  </button>
+                  <button className="btn btn-solid btn-green" onClick={() => setMostrarFormulario(true)}>
+                    Adquirir — $1,600
+                  </button>
+                </div>
               </div>
             </div>
 
             <div className="servicio-card-right">
-              <img src="/images/manglar-verde.jpg" alt="Manglar Verde" className="servicio-image" />
               <div className="badge">Quincenal</div>
               <div className="price">$1,600</div>
+              <div className="illustration">🟢</div>
             </div>
           </div>
 

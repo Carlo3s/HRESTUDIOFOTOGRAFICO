@@ -25,22 +25,28 @@ const ManglarBlanco = () => {
 
           <div className="servicio-card">
             <div className="servicio-card-left">
-              <h2>Solución premium para visibilidad</h2>
-              <p className="muted">Paquete completo para presencia profesional en web y redes.</p>
+              <div className="servicio-media">
+                <img src="/images/manglar-blanco.png" alt="Manglar Blanco" className="servicio-image" />
+              </div>
 
-              <ul className="features">
-                {caracteristicas.map((c, i) => (
-                  <li key={i}><span className="dot dot--gray" />{c}</li>
-                ))}
-              </ul>
+              <div className="servicio-content">
+                <h2>Solución premium para visibilidad</h2>
+                <p className="muted">Paquete completo para presencia profesional en web y redes.</p>
 
-              <div className="card-actions">
-                <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
-                  {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
-                </button>
-                <button className="btn btn-solid btn-gray" onClick={() => setMostrarFormulario(true)}>
-                  Adquirir — $3,200
-                </button>
+                <ul className="features">
+                  {caracteristicas.map((c, i) => (
+                    <li key={i}><span className="dot dot--gray" />{c}</li>
+                  ))}
+                </ul>
+
+                <div className="card-actions">
+                  <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
+                    {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
+                  </button>
+                  <button className="btn btn-solid btn-gray" onClick={() => setMostrarFormulario(true)}>
+                    Adquirir — $3,200
+                  </button>
+                </div>
               </div>
             </div>
 

@@ -13,25 +13,22 @@
 .servicio-sub { color:#374151; margin-bottom:18px; }
 
 .servicio-card { display:flex; gap:18px; align-items:center; justify-content:space-between; padding:18px; border-radius:12px; background:#fff; border: 3px solid rgba(0,0,0,0.04); }
-.servicio-card-left { flex:1; }
-.servicio-card-right { width:220px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px; }
 
-.badge { background:linear-gradient(90deg,#ecfccb,#bbf7d0); padding:6px 10px; border-radius:10px; font-weight:800; color:#065f46; }
-.badge--dark { background:linear-gradient(90deg,#e6e8ff,#c7d2fe); color:#3730a3; }
-.badge--red { background:linear-gradient(90deg,#fee2e2,#fecaca); color:#7f1d1d; }
+/* nueva estructura: media (imagen) + contenido en la columna izquierda */
+.servicio-card-left { flex:1; display:flex; gap:18px; align-items:flex-start; }
+.servicio-media { flex:0 0 160px; display:flex; align-items:center; justify-content:center; }
+.servicio-image { width:160px; height:160px; object-fit:cover; border-radius:12px; box-shadow: 0 12px 30px rgba(2,6,23,0.06); }
 
-.price { font-size:28px; font-weight:900; color:#0f172a; }
-.illustration { font-size:44px; opacity:0.9; }
+/* contenido textual al lado de la imagen */
+.servicio-content { flex:1; }
 
-/* features */
-.features { list-style:none; padding:0; margin:14px 0 6px; display:grid; gap:8px; }
-.features li { display:flex; align-items:center; gap:10px; color:#374151; font-weight:600; }
-.dot { width:12px; height:12px; border-radius:50%; display:inline-block; }
-.dot--green { background:#10b981; }
-.dot--gray { background:#6b7280; }
-.dot--red { background:#ef4444; }
-
-/* actions */
+/* móvil: apilar imagen encima del texto */
+@media (max-width: 900px) {
+  .servicio-card { flex-direction:column; align-items:stretch; }
+  .servicio-card-left { flex-direction:column; }
+  .servicio-media { width:100%; }
+  .servicio-image { width:100%; height:auto; }
+}
 .card-actions { display:flex; gap:12px; margin-top:14px; }
 .btn { padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,0.06); cursor:pointer; font-weight:800; }
 .btn-outline { background:transparent; color:#374151; }
@@ -50,6 +47,7 @@
 /* responsive */
 @media (max-width: 900px) {
   .servicio-card { flex-direction:column; align-items:stretch; }
-  .servicio-card-right { width:100%; flex-direction:row; justify-content:space-between; padding-top:12px; }
-  .card-actions { flex-direction:column; }
+  .servicio-card-left { flex-direction:column; }
+  .servicio-media { width:100%; }
+  .servicio-image { width:100%; height:auto; }
 }
