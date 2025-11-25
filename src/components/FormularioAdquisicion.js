@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
 
-const FormularioAdquisicion = ({ producto, onClose }) => {
+const FormularioAdquisicion = ({ producto = '', onClose }) => {
   const [nombre, setNombre] = useState('');
   const [telefono, setTelefono] = useState('');
   const [fecha, setFecha] = useState('');
@@ -36,8 +36,9 @@ const FormularioAdquisicion = ({ producto, onClose }) => {
   }
 
   return (
-    <div style={{ padding: 20 }}>
-      <h3>Adquirir {producto}</h3>
+    <div style={{ padding: 16, borderRadius: 8, background: '#fff' }}>
+      <h3 style={{ marginTop: 0 }}>Formulario: {producto}</h3>
+      <p>Este es un formulario provisional. Reemplázalo por tu componente real.</p>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 15 }}>
         <label>
           Nombre completo:
