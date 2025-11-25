@@ -22,11 +22,7 @@ const ManglarVerde = () => {
           <h1 style={{ color: '#10b981' }}>Manglar Verde — Detalles</h1>
           <p>Plan quincenal — incluye:</p>
           <ul>
-            <li>Activación / streaming</li>
-            <li>Fotografía profesional (10 PZ)</li>
-            <li>Video corto (4PZ)</li>
-            <li>Menciones (1)</li>
-            <li>Asesoramiento en redes</li>
+            {caracteristicas.map((c, i) => <li key={i}>{c}</li>)}
           </ul>
           <div style={{ fontSize: 24, fontWeight: 900 }}>Precio: $1600</div>
 
