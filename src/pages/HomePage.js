@@ -50,67 +50,67 @@ const HomePage = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 32 }}>
             {servicios.map((servicio) => (
-              <Link to={servicio.ruta} key={servicio.id} style={{ textDecoration: 'none' }}>
-                <div
-                  style={{
-                    background: '#fff',
-                    borderRadius: 16,
-                    overflow: 'hidden',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-                    transition: 'transform 0.3s, box-shadow 0.3s',
-                    cursor: 'pointer',
-                    border: `4px solid ${servicio.color}`,
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-12px)';
-                    e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
-                  }}
-                >
-                  {/* Color bar top */}
-                  <div style={{ background: `linear-gradient(90deg, ${servicio.color} 0%, ${servicio.color}dd 100%)`, height: 8 }}></div>
+              <div
+                key={servicio.id}
+                style={{
+                  background: '#fff',
+                  borderRadius: 16,
+                  overflow: 'hidden',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                  transition: 'transform 0.3s, box-shadow 0.3s',
+                  border: `4px solid ${servicio.color}`,
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-12px)';
+                  e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+                }}
+              >
+                {/* Color bar top */}
+                <div style={{ background: `linear-gradient(90deg, ${servicio.color} 0%, ${servicio.color}dd 100%)`, height: 8 }}></div>
 
-                  {/* Content */}
-                  <div style={{ padding: 32, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                    <div>
-                      <h3 style={{ fontSize: 28, fontWeight: 900, color: servicio.color, marginBottom: 12 }}>
-                        {servicio.nombre}
-                      </h3>
-                      <p style={{ fontSize: 18, color: '#555', lineHeight: 1.6, marginBottom: 20 }}>
-                        {servicio.descripcion}
-                      </p>
-                    </div>
-
-                    {/* Button */}
-                    <div style={{ marginTop: 20 }}>
-                      <div
-                        style={{
-                          display: 'inline-block',
-                          background: `linear-gradient(135deg, ${servicio.color} 0%, ${servicio.color}cc 100%)`,
-                          color: '#fff',
-                          padding: '12px 24px',
-                          borderRadius: 8,
-                          fontWeight: 800,
-                          fontSize: 14,
-                          transition: 'transform 0.2s',
-                          textTransform: 'uppercase',
-                          letterSpacing: 1,
-                        }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                      >
-                        Ver Más →
-                      </div>
-                    </div>
+                {/* Content */}
+                <div style={{ padding: 32, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <h3 style={{ fontSize: 28, fontWeight: 900, color: servicio.color, marginBottom: 12 }}>
+                      {servicio.nombre}
+                    </h3>
+                    <p style={{ fontSize: 18, color: '#555', lineHeight: 1.6, marginBottom: 20 }}>
+                      {servicio.descripcion}
+                    </p>
                   </div>
+
+                  {/* Button as Link */}
+                  <Link to={servicio.ruta} style={{ textDecoration: 'none' }}>
+                    <button
+                      style={{
+                        width: '100%',
+                        background: `linear-gradient(135deg, ${servicio.color} 0%, ${servicio.color}cc 100%)`,
+                        color: '#fff',
+                        padding: '12px 24px',
+                        borderRadius: 8,
+                        fontWeight: 800,
+                        fontSize: 14,
+                        border: 'none',
+                        cursor: 'pointer',
+                        transition: 'transform 0.2s',
+                        textTransform: 'uppercase',
+                        letterSpacing: 1,
+                      }}
+                      onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+                      onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                    >
+                      Ver Más →
+                    </button>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
