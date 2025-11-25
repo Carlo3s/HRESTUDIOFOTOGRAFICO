@@ -47,6 +47,8 @@
 .btn-green { background: linear-gradient(135deg,#10b981,#059669); box-shadow: 0 12px 30px rgba(16,185,129,0.12); }
 .btn-gray { background: linear-gradient(135deg,#6b7280,#4b5563); box-shadow: 0 12px 30px rgba(107,114,128,0.12); }
 .btn-red { background: linear-gradient(135deg,#ef4444,#dc2626); box-shadow: 0 12px 30px rgba(239,68,68,0.12); }
+.btn-price-custom { background:transparent; border:2px dashed #667eea; padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:700; color:#667eea; font-size:13px; transition:all .2s; }
+.btn-price-custom:hover { background:#f3f4f6; border-color:#764ba2; color:#764ba2; }
 
 /* detalles */
 .detalles { margin-top:18px; padding:16px; background:#fff; border-radius:10px; box-shadow:0 12px 30px rgba(2,6,23,0.04); }

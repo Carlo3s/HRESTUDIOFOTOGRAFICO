@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
 import ServicioImage from '../components/ServicioImage';
 import FeatureList from '../components/FeatureList';
+import PricingToggle from '../components/PricingToggle';
+import CustomPriceModal from '../components/CustomPriceModal';
 import './Servicios.css';
 
 const ManglarVerde = () => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
+  const [mostrarCustom, setMostrarCustom] = useState(false);
+  const [precioActual, setPrecioActual] = useState(1600);
+  const [periodoActual, setPeriodoActual] = useState('quincenal');
 
   const caracteristicas = [
     { icon: 'stream', title: 'Activación / streaming', desc: 'Retransmisión en vivo para eventos o promociones; incluye montaje de escena y gráficos básicos.' },
@@ -17,13 +22,23 @@ const ManglarVerde = () => {
     { icon: 'advice', title: 'Asesoría para redes', desc: '30 minutos de consultoría para calendario de publicaciones y hashtags.' }
   ];
 
+  const handlePeriodChange = (period, price) => {
+    setPeriodoActual(period);
+    setPrecioActual(price);
+  };
+
+  const handleCustomPrice = (price) => {
+    setPrecioActual(price);
+    setPeriodoActual('personalizado');
+  };
+
   return (
     <div className="servicio-page">
       <div className="servicio-hero servicio-hero--verde">
         <div className="servicio-hero-inner">
           <Link to="/" className="back-link">← Volver</Link>
           <h1 className="servicio-title">Manglar Verde</h1>
-          <p className="servicio-sub">Plan quincenal — resumen</p>
+          <p className="servicio-sub">Plan {periodoActual} — resumen</p>
 
           <div className="servicio-card">
             <div className="servicio-card-left">
@@ -44,7 +59,7 @@ const ManglarVerde = () => {
                     {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
                   </button>
                   <button className="btn btn-solid btn-green" onClick={() => setMostrarFormulario(true)}>
-                    Adquirir — $1,600
+                    Adquirir — ${precioActual}
                   </button>
                 </div>
               </div>
@@ -52,9 +67,14 @@ const ManglarVerde = () => {
 
             <div className="servicio-card-right">
               <div className="badge">Quincenal</div>
-              <div className="price">$1,600</div>
+              <div className="price">${precioActual}</div>
+              <button className="btn-price-custom" onClick={() => setMostrarCustom(true)}>
+                💰 Precio personalizado
+              </button>
             </div>
           </div>
+
+          <PricingToggle basePrice={1600} onPeriodChange={handlePeriodChange} />
 
           {mostrarDetalles && (
             <div style={{ marginTop: 18 }}>
@@ -68,10 +88,17 @@ const ManglarVerde = () => {
       {mostrarFormulario && (
         <div className="modal-overlay" onClick={() => setMostrarFormulario(false)}>
           <div className="modal-body" onClick={(e) => e.stopPropagation()}>
-            <FormularioAdquisicion producto="Manglar Verde" onClose={() => setMostrarFormulario(false)} />
+            <FormularioAdquisicion producto={`Manglar Verde - ${periodoActual} ($${precioActual})`} onClose={() => setMostrarFormulario(false)} />
           </div>
         </div>
       )}
+
+      <CustomPriceModal 
+        isOpen={mostrarCustom} 
+        onClose={() => setMostrarCustom(false)} 
+        onApply={handleCustomPrice}
+        currentPrice={precioActual}
+      />
     </div>
   );
 };
