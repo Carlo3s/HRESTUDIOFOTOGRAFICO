@@ -15,9 +15,9 @@
 .servicio-card { display:flex; gap:18px; align-items:center; justify-content:space-between; padding:18px; border-radius:12px; background:#fff; border: 3px solid rgba(0,0,0,0.04); }
 
 /* nueva estructura: media (imagen) + contenido en la columna izquierda */
-.servicio-card-left { flex:1; display:flex; gap:18px; align-items:flex-start; }
-.servicio-media { flex:0 0 160px; display:flex; align-items:center; justify-content:center; }
-.servicio-svg { width:160px; height:160px; border-radius:12px; display:block; }
+.servicio-card-left { flex:1; display:flex; gap:22px; align-items:flex-start; }
+.servicio-media { flex:0 0 220px; display:flex; align-items:center; justify-content:center; }
+.servicio-svg { width:220px; height:220px; border-radius:12px; display:block; margin:0 auto; }
 
 /* suavizar icon y hacer responsivo */
 .servicio-svg .manglar-icon { stroke-width:2; }
@@ -26,9 +26,9 @@
 /* móvil: imagen encima del texto */
 @media (max-width: 900px) {
   .servicio-card { flex-direction:column; align-items:stretch; }
-  .servicio-card-left { flex-direction:column; }
-  .servicio-media { width:100%; display:flex; justify-content:center; margin-bottom:12px; }
-  .servicio-svg { width:220px; height:220px; max-width:100%; }
+  .servicio-card-left { flex-direction:column; gap:12px; }
+  .servicio-media { width:100%; display:flex; justify-content:center; margin-bottom:12px; flex:0 0 auto; }
+  .servicio-svg { width:260px; height:260px; max-width:100%; }
 }
 /* contenido textual al lado de la imagen */
 .servicio-content { flex:1; }

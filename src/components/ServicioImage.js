@@ -6,7 +6,7 @@ const GRADIENTS = {
   rojo: ['#ff9b9b', '#ef4444'],
 };
 
-const ServicioImage = ({ variant = 'verde', label = 'Manglar', size = 160 }) => {
+const ServicioImage = ({ variant = 'verde', label = 'Manglar', size = 220 }) => { // tamaño aumentado a 220
   const [c1, c2] = GRADIENTS[variant] || GRADIENTS.verde;
   const id = `grad-${variant}`.replace(/\s+/g, '');
 
@@ -34,16 +34,12 @@ const ServicioImage = ({ variant = 'verde', label = 'Manglar', size = 160 }) => 
           <circle cx="80" cy="80" r="70" fill={`url(#${id})`} />
         </g>
 
-        {/* simple manglar icon: curvas (raíces), tronco y hojas */}
         <g transform="translate(32,26)" stroke="#063a2b" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
-          {/* raíces */}
           <path d="M10 78 C30 50, 60 50, 78 78" />
           <path d="M0 62 C20 38, 60 38, 78 62" strokeOpacity="0.9" />
           <path d="M22 78 C34 64, 46 64, 58 78" strokeOpacity="0.9" />
-          {/* tronco y unión */}
           <path d="M39 18 C39 34, 39 44, 39 56" />
           <path d="M46 16 C36 22, 36 30, 46 36" strokeOpacity="0.9" />
-          {/* hojas */}
           <g stroke="#063a2b" fill="#063a2b">
             <ellipse cx="46" cy="6" rx="6" ry="10" transform="rotate(-6 46 6)" />
             <ellipse cx="34" cy="12" rx="6" ry="10" transform="rotate(-20 34 12)" />
@@ -51,7 +47,6 @@ const ServicioImage = ({ variant = 'verde', label = 'Manglar', size = 160 }) => 
           </g>
         </g>
 
-        {/* label dentro del círculo */}
         <text x="50%" y="132" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontSize="14" fontWeight="800" fill="#073227">
           {label}
         </text>
