@@ -144,8 +144,16 @@ const ManglarRojo = () => {
           </div>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <div>
+      {/* Pantalla principal */}
+      <h1>Manglar Rojo</h1>
+      <button onClick={() => setMostrarDetalles(true)}>Ver Más</button>
     </div>
   );
 }
 
-export default ManglarRojo
+export default ManglarRojo;
