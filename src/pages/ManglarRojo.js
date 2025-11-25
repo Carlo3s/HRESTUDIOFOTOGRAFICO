@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
 import ServicioImage from '../components/ServicioImage';
+import FeatureList from '../components/FeatureList';
 import './Servicios.css';
 
 const ManglarRojo = () => {
@@ -9,11 +10,11 @@ const ManglarRojo = () => {
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
 
   const caracteristicas = [
-    'Colaboración con creador',
-    'Marketing digital avanzado',
-    'Fotografía (30 PZ)',
-    'Videos (15 PZ)',
-    '5 menciones y promoción'
+    { icon: '🔗', title: 'Colaboración con creador', desc: 'Trabaja directamente con un creador de contenido.' },
+    { icon: '📈', title: 'Marketing digital avanzado', desc: 'Estrategias de marketing digital para maximizar el alcance.' },
+    { icon: '📸', title: 'Fotografía (30 PZ)', desc: '30 fotografías profesionales para tu negocio.' },
+    { icon: '🎥', title: 'Videos (15 PZ)', desc: '15 videos cortos para redes sociales.' },
+    { icon: '📢', title: '5 menciones y promoción', desc: 'Promoción garantizada a través de menciones.' }
   ];
 
   return (
@@ -34,7 +35,7 @@ const ManglarRojo = () => {
 
                 <ul className="features">
                   {caracteristicas.map((c, i) => (
-                    <li key={i}><span className="dot dot--red" />{c}</li>
+                    <li key={i}><span className="dot dot--red" />{c.title}</li>
                   ))}
                 </ul>
 
@@ -56,9 +57,9 @@ const ManglarRojo = () => {
           </div>
 
           {mostrarDetalles && (
-            <div className="detalles">
+            <div style={{ marginTop: 18 }}>
               <h3>Detalle del plan</h3>
-              <p>Estrategia avanzada, gestión de campañas y optimización continua.</p>
+              <FeatureList features={caracteristicas} />
             </div>
           )}
         </div>

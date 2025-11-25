@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
 import ServicioImage from '../components/ServicioImage';
+import FeatureList from '../components/FeatureList';
 import './Servicios.css';
 
 const ManglarBlanco = () => {
@@ -9,11 +10,11 @@ const ManglarBlanco = () => {
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
 
   const caracteristicas = [
-    'Fotografía profesional (20 PZ)',
-    'Página web (subdominio)',
-    'Flyers para redes (2 PZ)',
-    'Video (8 PZ)',
-    '3 menciones en plataformas'
+    { icon: 'camera', title: 'Fotografía profesional (20 PZ)', desc: '' },
+    { icon: 'web', title: 'Página web (subdominio)', desc: '' },
+    { icon: 'flyer', title: 'Flyers para redes (2 PZ)', desc: '' },
+    { icon: 'video', title: 'Video (8 PZ)', desc: '' },
+    { icon: 'mention', title: '3 menciones en plataformas', desc: '' }
   ];
 
   return (
@@ -34,7 +35,7 @@ const ManglarBlanco = () => {
 
                 <ul className="features">
                   {caracteristicas.map((c, i) => (
-                    <li key={i}><span className="dot dot--gray" />{c}</li>
+                    <li key={i}><span className="dot dot--gray" />{c.title}</li>
                   ))}
                 </ul>
 
@@ -56,9 +57,9 @@ const ManglarBlanco = () => {
           </div>
 
           {mostrarDetalles && (
-            <div className="detalles">
+            <div style={{ marginTop: 18 }}>
               <h3>Detalle del plan</h3>
-              <p>Incluye soporte web y contenido optimizado para conversión y branding.</p>
+              <FeatureList features={caracteristicas} />
             </div>
           )}
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
 import ServicioImage from '../components/ServicioImage';
+import FeatureList from '../components/FeatureList';
 import './Servicios.css';
 
 const ManglarVerde = () => {
@@ -9,11 +10,11 @@ const ManglarVerde = () => {
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
 
   const caracteristicas = [
-    'Activación / streaming de tu negocio',
-    'Fotografía profesional (10 PZ)',
-    'Video corto (4PZ)',
-    '1 mención en nuestras plataformas',
-    'Asesoría para redes'
+    { icon: 'stream', title: 'Activación / streaming', desc: 'Retransmisión en vivo para eventos o promociones; incluye montaje de escena y gráficos básicos.' },
+    { icon: 'camera', title: 'Fotografía profesional (10 PZ)', desc: 'Selección y retoque de 10 fotografías optimizadas para redes y web.' },
+    { icon: 'video', title: 'Video corto (4PZ)', desc: '4 clips cortos editados listos para Reels / TikTok con sonido y subtítulos.' },
+    { icon: 'mention', title: '1 mención en nuestras plataformas', desc: 'Publicación y mención en nuestras redes con enlace a tu negocio.' },
+    { icon: 'advice', title: 'Asesoría para redes', desc: '30 minutos de consultoría para calendario de publicaciones y hashtags.' }
   ];
 
   return (
@@ -34,7 +35,7 @@ const ManglarVerde = () => {
 
                 <ul className="features">
                   {caracteristicas.map((c, i) => (
-                    <li key={i}><span className="dot dot--green" />{c}</li>
+                    <li key={i}><span className="dot dot--green" />{c.title}</li>
                   ))}
                 </ul>
 
@@ -56,9 +57,9 @@ const ManglarVerde = () => {
           </div>
 
           {mostrarDetalles && (
-            <div className="detalles">
+            <div style={{ marginTop: 18 }}>
               <h3>Detalle del plan</h3>
-              <p>El plan incluye producción, postproducción y publicación. Se entrega material optimizado para redes.</p>
+              <FeatureList features={caracteristicas} />
             </div>
           )}
         </div>
