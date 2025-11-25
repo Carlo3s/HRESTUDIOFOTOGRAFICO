@@ -1,25 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --bg:#f7f8fb;
+  --accent-green:#10b981;
+  --accent-gray:#6b7280;
+  --accent-red:#ef4444;
+  --card-bg:#ffffff;
+  --sidebar-width:260px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;background:var(--bg);}
+
+aside{
+  width:var(--sidebar-width);
+  position:fixed;
+  left:0;top:0;bottom:0;
+  padding:20px;
+  background:var(--card-bg);
+  box-shadow: 2px 0 20px rgba(0,0,0,0.05);
+  z-index:50;
 }
 
-* {
-  box-sizing: border-box;
+main{ margin-left: var(--sidebar-width); min-height:100vh; }
+
+/* Sidebar links */
+aside h3{ margin:0 0 12px; font-size:18px; font-weight:800; }
+aside nav ul{ list-style:none; padding:0; margin:0; }
+aside nav a{ display:block; color:#6b21a8; text-decoration:underline; padding:8px 0; font-weight:600; }
+
+/* Hero / home */
+.home-hero { text-align:center; padding:60px 20px; color:#fff; background: linear-gradient(135deg,#667eea,#764ba2); }
+.home-hero h1{ font-size:56px; margin:0 0 12px; line-height:1.02; text-shadow:3px 3px 8px rgba(0,0,0,0.2); font-weight:900;}
+
+/* cards */
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:var(--shadow);
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* servicio cards grid */
+.servicios-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:28px; margin: 32px 0; }
+.servicio-card{ border-radius:12px; overflow:hidden; transition:transform .25s, box-shadow .25s; display:flex; flex-direction:column; height:100%; border:4px solid transparent; }
+.servicio-card:hover{ transform:translateY(-10px); box-shadow:0 25px 60px rgba(0,0,0,0.12); }
+
+/* botones */
+.btn{
+  display:inline-block; padding:12px 20px; border-radius:8px; color:#fff; font-weight:800; border:none; cursor:pointer; text-transform:uppercase; letter-spacing:1px;
+}
+.btn-green{ background:linear-gradient(135deg,var(--accent-green),#059669); }
+.btn-gray{ background:linear-gradient(135deg,var(--accent-gray),#4b5563); }
+.btn-red{ background:linear-gradient(135deg,var(--accent-red),#dc2626); }
+
+/* Contacto layout */
+.contact-grid{ max-width:900px; display:grid; gap:18px; margin-top:18px; }
+.contact-item{
+  background:var(--card-bg); padding:18px; border-radius:10px; box-shadow:var(--shadow); display:flex; gap:14px; align-items:center;
+}
+.contact-item strong{ display:block; font-weight:800; font-size:16px; }
+
+/* form inputs */
+input[type="text"], input[type="email"], textarea, input[type="date"]{
+  width:100%; padding:10px; border:1px solid #cfcfcf; border-radius:4px; font-size:14px;
+}
+
+/* responsive */
+@media (max-width:900px){
+  aside{ position:relative; width:100%; height:auto; box-shadow:none; }
+  main{ margin-left:0; }
+  .home-hero h1{ font-size:36px; }
 }
