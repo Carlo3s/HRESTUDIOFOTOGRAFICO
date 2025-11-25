@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
 import ManglarVerde from './pages/ManglarVerde';
 import ManglarBlanco from './pages/ManglarBlanco';
@@ -7,9 +8,9 @@ import ManglarRojo from './pages/ManglarRojo';
 import QuienesSomos from './pages/QuienesSomos';
 import AcercaDe from './pages/AcercaDe';
 import Contacto from './pages/Contacto';
-import Sidebar from './components/Sidebar';
-import initialPages from './data/pages.json';
-import './App.css';
+
+// define un valor por defecto para initialPages para evitar errores
+const initialPages = [];
 
 function App() {
   const [pages, setPages] = useState(() => {
