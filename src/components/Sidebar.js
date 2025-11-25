@@ -45,14 +45,21 @@ const Sidebar = ({ onCloseSidebar }) => {
             <span style={{ fontSize: 22 }}>🏠</span> Inicio
           </Link>
         </li>
-        {productos.map((producto, idx) => (
-          <li key={producto.id}>
-            <Link to={`/producto/${producto.id}`}
-              style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span style={{ fontSize: 22 }}>{iconos[idx]}</span> {producto.nombre}
-            </Link>
-          </li>
-        ))}
+        <li>
+          <Link to="/quienes-somos" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 22 }}>ℹ️</span> Quiénes Somos
+          </Link>
+        </li>
+        <li>
+          <Link to="/acerca-de" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 22 }}>📘</span> Acerca de
+          </Link>
+        </li>
+        <li>
+          <Link to="/contacto" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 22 }}>✉️</span> Contacto
+          </Link>
+        </li>
       </ul>
       {admin && (
         <>
