@@ -1,29 +1,102 @@
-/* Estilos llamativos alineados con el resto del sitio */
+/* Ícono WhatsApp Flotante - Minimalista */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 999;
+  cursor: pointer;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.15) translateY(-8px);
+  box-shadow: 0 20px 60px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-icon:active {
+  transform: scale(0.92);
+}
+
+/* Pulse animation (opcional) */
+@keyframes pulse-whatsapp {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse-whatsapp 2s infinite;
+}
+
+/* Responsive: tablet */
+@media (max-width: 768px) {
+  .whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .whatsapp-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Responsive: móvil */
+@media (max-width: 480px) {
+  .whatsapp-icon {
+    width: 56px;
+    height: 56px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .whatsapp-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* resto del CSS de Contacto */
 .contact-page { padding: 48px 24px; background: linear-gradient(180deg, rgba(247,248,251,0.6), rgba(247,248,251,1)); min-height: calc(100vh - 40px); }
 .contact-inner { max-width: 1100px; margin: 0 auto; }
 
 .contact-title { font-size: 40px; font-weight: 900; margin: 8px 0 24px; color: #0f172a; }
 
-/* Grid */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
 
-/* Contact item */
 .contact-item { display: flex; gap: 16px; align-items: center; padding: 18px; border-radius: 12px; background: #fff; box-shadow: 0 12px 30px rgba(2,6,23,0.06); border-left: 6px solid transparent; }
-.card-accent:nth-child(1){ border-left-color: #f43f5e; } /* teléfono - rojo/rosa */
-.card-accent:nth-child(2){ border-left-color: #6366f1; } /* email - púrpura */
-.card-accent:nth-child(3){ border-left-color: #10b981; } /* ubicación - verde */
+.card-accent:nth-child(1){ border-left-color: #f43f5e; }
+.card-accent:nth-child(2){ border-left-color: #6366f1; }
+.card-accent:nth-child(3){ border-left-color: #10b981; }
 
 .contact-icon { font-size: 30px; width: 56px; height: 56px; background: linear-gradient(135deg,#fff,#f7fafc); border-radius: 10px; display:flex; align-items:center; justify-content:center; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
 .contact-label { font-weight: 800; color:#111827; margin-bottom:4px; }
 .contact-value { color:#475569; font-size:15px; }
 
-/* Form card */
 .form-card { grid-column: 1 / -1; background: linear-gradient(180deg,#ffffff,#fbfdff); padding: 20px; border-radius: 12px; box-shadow: 0 20px 60px rgba(2,6,23,0.06); }
 
-/* Alert */
 .alert-success { background: #ecfdf5; color: #065f46; padding: 12px; border-radius: 8px; margin-bottom: 12px; font-weight:700; }
 
-/* Form */
 .contact-form { display: grid; gap: 12px; }
 .contact-form input, .contact-form textarea {
   width:100%; padding:12px 14px; border-radius:8px; border:1px solid #e6e9ef; font-size:15px; background:#ffffff;
@@ -34,8 +107,20 @@
 .btn { display:inline-block; padding:12px 18px; border-radius:10px; border:none; cursor:pointer; font-weight:800; }
 .btn-gradient { background: linear-gradient(135deg,#667eea 0%, #764ba2 100%); color:#fff; box-shadow: 0 12px 30px rgba(102,126,234,0.18); }
 
-/* Responsive */
+/* Responsive: tablet */
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; }
   .form-card { order: 3; }
+  .contact-title { font-size: 32px; }
+}
+
+/* Responsive: móvil */
+@media (max-width: 600px) {
+  .contact-page { padding: 32px 16px; }
+  .contact-title { font-size: 28px; margin-bottom: 18px; }
+  .contact-grid { gap: 12px; }
+  .contact-item { padding: 14px; }
+  .contact-icon { width: 48px; height: 48px; font-size: 24px; }
+  .contact-form input, .contact-form textarea { padding: 10px 12px; font-size: 14px; }
+  .btn { padding: 10px 16px; font-size: 14px; }
 }
