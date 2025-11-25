@@ -7,6 +7,9 @@ import ViewPage from './pages/ViewPage';
 import ManglarVerde from './pages/ManglarVerde';
 import ManglarBlanco from './pages/ManglarBlanco';
 import ManglarRojo from './pages/ManglarRojo';
+import QuienesSomos from './pages/QuienesSomos';
+import AcercaDe from './pages/AcercaDe';
+import Contacto from './pages/Contacto';
 import initialPages from './data/pages.json';
 import './App.css';
 
@@ -38,6 +41,9 @@ function App() {
             <Route path="/producto/3" element={<ManglarRojo />} />
             <Route path="/create" element={<CreatePage onAddPage={handleAddPage} />} />
             <Route path="/page/:id" element={<ViewPage pages={pages} />} />
+            <Route path="/quienes-somos" element={<QuienesSomos />} />
+            <Route path="/acerca-de" element={<AcercaDe />} />
+            <Route path="/contacto" element={<Contacto />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Layout>
