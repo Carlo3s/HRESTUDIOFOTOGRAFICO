@@ -17,8 +17,19 @@
 /* nueva estructura: media (imagen) + contenido en la columna izquierda */
 .servicio-card-left { flex:1; display:flex; gap:18px; align-items:flex-start; }
 .servicio-media { flex:0 0 160px; display:flex; align-items:center; justify-content:center; }
-.servicio-image { width:160px; height:160px; object-fit:cover; border-radius:12px; box-shadow: 0 12px 30px rgba(2,6,23,0.06); }
+.servicio-svg { width:160px; height:160px; border-radius:12px; display:block; }
 
+/* suavizar icon y hacer responsivo */
+.servicio-svg .manglar-icon { stroke-width:2; }
+.servicio-svg text { letter-spacing:0.6px; }
+
+/* móvil: imagen encima del texto */
+@media (max-width: 900px) {
+  .servicio-card { flex-direction:column; align-items:stretch; }
+  .servicio-card-left { flex-direction:column; }
+  .servicio-media { width:100%; display:flex; justify-content:center; margin-bottom:12px; }
+  .servicio-svg { width:220px; height:220px; max-width:100%; }
+}
 /* contenido textual al lado de la imagen */
 .servicio-content { flex:1; }
 

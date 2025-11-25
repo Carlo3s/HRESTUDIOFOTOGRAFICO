@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
+import ServicioImage from '../components/ServicioImage';
 import './Servicios.css';
 
 const ManglarRojo = () => {
@@ -25,9 +26,7 @@ const ManglarRojo = () => {
 
           <div className="servicio-card">
             <div className="servicio-card-left">
-              <div className="servicio-media">
-                <img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\manglar-rojo.png" alt="Manglar Rojo" className="servicio-image" />
-              </div>
+              <ServicioImage variant="rojo" label="Manglar Rojo" />
 
               <div className="servicio-content">
                 <h2>Máxima exposición y alcance</h2>
@@ -53,7 +52,6 @@ const ManglarRojo = () => {
             <div className="servicio-card-right">
               <div className="badge badge--red">Top</div>
               <div className="price">$4,000</div>
-              <div className="illustration">🔴</div>
             </div>
           </div>
 

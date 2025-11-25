@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
+import ServicioImage from '../components/ServicioImage';
 import './Servicios.css';
 
 const ManglarVerde = () => {
@@ -25,9 +26,7 @@ const ManglarVerde = () => {
 
           <div className="servicio-card">
             <div className="servicio-card-left">
-              <div className="servicio-media">
-                <img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\manglar-verde.png" alt="Manglar Verde" className="servicio-image" />
-              </div>
+              <ServicioImage variant="verde" label="Manglar Verde" />
 
               <div className="servicio-content">
                 <h2>Perfecto para proyectos ecológicos</h2>
@@ -53,7 +52,6 @@ const ManglarVerde = () => {
             <div className="servicio-card-right">
               <div className="badge">Quincenal</div>
               <div className="price">$1,600</div>
-              <div className="illustration">🟢</div>
             </div>
           </div>
 
