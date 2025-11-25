@@ -10,7 +10,9 @@ const ManglarBlanco = () => {
   const caracteristicas = [
     'Fotografía profesional (20 PZ)',
     'Página web (subdominio)',
-    'Flyers para redes (2 PZ)',
+    'Flyers     // ...existing code...
+    <img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\manglar-blanco.png" alt="Manglar Blanco" className="servicio-image" />
+    // ...existing code...para redes (2 PZ)',
     'Video (8 PZ)',
     '3 menciones en plataformas'
   ];
