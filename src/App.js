@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Layout from './components/Layout';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import CreatePage from './pages/CreatePage';
-import ViewPage from './pages/ViewPage';
 import ManglarVerde from './pages/ManglarVerde';
 import ManglarBlanco from './pages/ManglarBlanco';
 import ManglarRojo from './pages/ManglarRojo';
 import QuienesSomos from './pages/QuienesSomos';
 import AcercaDe from './pages/AcercaDe';
 import Contacto from './pages/Contacto';
+import Sidebar from './components/Sidebar';
 import initialPages from './data/pages.json';
 import './App.css';
 
@@ -32,22 +30,16 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
-        <Layout pages={pages}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/producto/1" element={<ManglarVerde />} />
-            <Route path="/producto/2" element={<ManglarBlanco />} />
-            <Route path="/producto/3" element={<ManglarRojo />} />
-            <Route path="/create" element={<CreatePage onAddPage={handleAddPage} />} />
-            <Route path="/page/:id" element={<ViewPage pages={pages} />} />
-            <Route path="/quienes-somos" element={<QuienesSomos />} />
-            <Route path="/acerca-de" element={<AcercaDe />} />
-            <Route path="/contacto" element={<Contacto />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Layout>
-      </div>
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/manglar-verde" element={<ManglarVerde />} />
+        <Route path="/manglar-blanco" element={<ManglarBlanco />} />
+        <Route path="/manglar-rojo" element={<ManglarRojo />} />
+        <Route path="/quienes-somos" element={<QuienesSomos />} />
+        <Route path="/acerca-de" element={<AcercaDe />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
     </Router>
   );
 }

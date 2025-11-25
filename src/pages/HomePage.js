@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import '../pages/HomePage.css';
 
 const servicios = [
-  { id: 1, nombre: 'Manglar Verde', descripcion: 'Producto ecológico de alta calidad, ideal para proyectos sustentables.', color: '#10b981' },
-  { id: 2, nombre: 'Manglar Blanco', descripcion: 'Producto premium para soluciones ambientales y paisajismo.', color: '#6b7280' },
-  { id: 3, nombre: 'Manglar Rojo', descripcion: 'Producto resistente, perfecto para restauración de ecosistemas.', color: '#ef4444' },
+  { id: 1, nombre: 'Manglar Verde', ruta: '/manglar-verde', descripcion: 'Producto ecológico de alta calidad, ideal para proyectos sustentables.', color: '#10b981' },
+  { id: 2, nombre: 'Manglar Blanco', ruta: '/manglar-blanco', descripcion: 'Producto premium para soluciones ambientales y paisajismo.', color: '#6b7280' },
+  { id: 3, nombre: 'Manglar Rojo', ruta: '/manglar-rojo', descripcion: 'Producto resistente, perfecto para restauración de ecosistemas.', color: '#ef4444' },
 ];
 
 const HomePage = () => {
@@ -50,7 +50,7 @@ const HomePage = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 32 }}>
             {servicios.map((servicio) => (
-              <Link to={`/${servicio.nombre.toLowerCase().replace(/\s+/g, '-')}`} key={servicio.id} style={{ textDecoration: 'none' }}>
+              <Link to={servicio.ruta} key={servicio.id} style={{ textDecoration: 'none' }}>
                 <div
                   style={{
                     background: '#fff',
