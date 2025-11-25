@@ -24,9 +24,9 @@ function isAdmin() {
 const Sidebar = ({ onCloseSidebar }) => {
   const admin = isAdmin();
   return (
-    <div className="sidebar">
+    <aside style={{ width: 260, padding: 16, background: '#fff', boxShadow: '0 2px 10px rgba(0,0,0,0.08)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, position: 'relative' }}>
-        <span style={{ fontWeight: 'bold', fontSize: 18, lineHeight: 1.1 }}>Cangrejito Creativo</span>
+        <h3 style={{ marginBottom: 12, fontWeight: 'bold', fontSize: 18, lineHeight: 1.1 }}>Cangrejito Creativo</h3>
         {typeof onCloseSidebar === 'function' && (
           <button
             className="sidebar-toggle-btn"
@@ -39,28 +39,30 @@ const Sidebar = ({ onCloseSidebar }) => {
           </button>
         )}
       </div>
-      <ul>
-        <li>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 22 }}>🏠</span> Inicio
-          </Link>
-        </li>
-        <li>
-          <Link to="/quienes-somos" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 22 }}>ℹ️</span> Quiénes Somos
-          </Link>
-        </li>
-        <li>
-          <Link to="/acerca-de" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 22 }}>📘</span> Acerca de
-          </Link>
-        </li>
-        <li>
-          <Link to="/contacto" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontSize: 22 }}>✉️</span> Contacto
-          </Link>
-        </li>
-      </ul>
+      <nav>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontSize: 22 }}>🏠</span> Inicio
+            </Link>
+          </li>
+          <li>
+            <Link to="/quienes-somos" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontSize: 22 }}>ℹ️</span> Quiénes Somos
+            </Link>
+          </li>
+          <li>
+            <Link to="/acerca-de" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontSize: 22 }}>📘</span> Acerca de
+            </Link>
+          </li>
+          <li>
+            <Link to="/contacto" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ fontSize: 22 }}>✉️</span> Contacto
+            </Link>
+          </li>
+        </ul>
+      </nav>
       {admin && (
         <>
           <div className="sidebar-footer">
@@ -71,7 +73,7 @@ const Sidebar = ({ onCloseSidebar }) => {
           </div>
         </>
       )}
-    </div>
+    </aside>
   );
 };
 
