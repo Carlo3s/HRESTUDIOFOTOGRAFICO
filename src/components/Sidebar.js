@@ -26,7 +26,7 @@ const Sidebar = ({ onCloseSidebar }) => {
   return (
     <div className="sidebar">
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20, position: 'relative' }}>
-        <span style={{ fontWeight: 'bold', fontSize: 18, lineHeight: 1.1 }}>HR ESTUDIO FOTOGRAFICO</span>
+        <span style={{ fontWeight: 'bold', fontSize: 18, lineHeight: 1.1 }}>Cangrejito Creativo</span>
         {typeof onCloseSidebar === 'function' && (
           <button
             className="sidebar-toggle-btn"
