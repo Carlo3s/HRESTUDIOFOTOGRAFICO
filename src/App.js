@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Sidebar />
-      <main style={{ marginLeft: 260 /* si el sidebar es fijo */ }}>
+      <main style={{ marginLeft: 260 }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/manglar-verde" element={<ManglarVerde />} />
