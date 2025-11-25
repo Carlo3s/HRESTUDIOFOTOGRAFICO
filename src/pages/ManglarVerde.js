@@ -45,9 +45,9 @@ const ManglarVerde = () => {
             </div>
 
             <div className="servicio-card-right">
+              <img src="/images/manglar-verde.jpg" alt="Manglar Verde" className="servicio-image" />
               <div className="badge">Quincenal</div>
               <div className="price">$1,600</div>
-              <div className="illustration">🟢</div>
             </div>
           </div>
 
