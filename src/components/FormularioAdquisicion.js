@@ -36,31 +36,12 @@ const FormularioAdquisicion = ({ producto = '', onClose }) => {
   }
 
   return (
-    <div style={{ padding: 16, borderRadius: 8, background: '#fff' }}>
+    <div style={{ padding: 16, borderRadius: 8, background: '#fff', boxShadow: '0 6px 18px rgba(0,0,0,0.06)' }}>
       <h3 style={{ marginTop: 0 }}>Formulario: {producto}</h3>
-      <p>Este es un formulario provisional. Reemplázalo por tu componente real.</p>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 15 }}>
-        <label>
-          Nombre completo:
-          <input type="text" value={nombre} onChange={e => setNombre(e.target.value)} required autoComplete="off" />
-        </label>
-        <label>
-          Número telefónico:
-          <input type="tel" value={telefono} onChange={e => setTelefono(e.target.value)} required autoComplete="off" />
-        </label>
-        <label>
-          Fecha del servicio:
-          <input type="date" value={fecha} onChange={e => setFecha(e.target.value)} required autoComplete="off" />
-        </label>
-        <label>
-          Mensaje adicional:
-          <textarea value={mensaje} onChange={e => setMensaje(e.target.value)} placeholder="Escribe aquí tus dudas o requerimientos..." autoComplete="off" />
-        </label>
-        <div style={{ display: 'flex', gap: 10 }}>
-          <button type="submit" style={{ padding: '10px 20px', borderRadius: 5, background: '#3498db', color: '#fff', border: 'none' }}>Enviar</button>
-          <button type="button" onClick={onClose} style={{ padding: '10px 20px', borderRadius: 5, background: '#e0e0e0', color: '#333', border: 'none' }}>Cancelar</button>
-        </div>
-      </form>
+      <p>Formulario provisional — reemplázalo por tu versión real si la tienes.</p>
+      <div style={{ display: 'flex', gap: 8 }}>
+        <button onClick={onClose} style={{ padding: '8px 12px', cursor: 'pointer' }}>Cerrar</button>
+      </div>
     </div>
   );
 };
