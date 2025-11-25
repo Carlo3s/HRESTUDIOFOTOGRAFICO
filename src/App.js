@@ -8,12 +8,13 @@ import ManglarRojo from './pages/ManglarRojo';
 import QuienesSomos from './pages/QuienesSomos';
 import AcercaDe from './pages/AcercaDe';
 import Contacto from './pages/Contacto';
+import './index.css';
 
 function App() {
   return (
     <Router>
       <Sidebar />
-      <main style={{ marginLeft: 260 }}>
+      <main className="app-main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/manglar-verde" element={<ManglarVerde />} />

@@ -1,49 +1,72 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FormularioAdquisicion from '../components/FormularioAdquisicion';
+import './Servicios.css';
 
 const ManglarVerde = () => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [mostrarDetalles, setMostrarDetalles] = useState(false);
 
   const caracteristicas = [
-    'Activación ó Transmisión streaming de tu negocio',
-    'Fotografía profesional de producto o servicio (10 PZ)',
-    'Video de producto o servicio (4PZ MENOS DE 1M)',
-    'Menciones en nuestras plataformas de Cangrejito Creativo y socios (1 MENCIÓN)',
-    'Asesoramiento para optimizar tus redes sociales'
+    'Activación / streaming de tu negocio',
+    'Fotografía profesional (10 PZ)',
+    'Video corto (4PZ)',
+    '1 mención en nuestras plataformas',
+    'Asesoría para redes'
   ];
 
-  if (mostrarDetalles) {
-    return (
-      <div style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', minHeight: '100vh', padding: '40px 20px' }}>
-        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-          <button onClick={() => setMostrarDetalles(false)} style={{ marginBottom: 12 }}>← Volver</button>
-          <h1 style={{ color: '#10b981' }}>Manglar Verde — Detalles</h1>
-          <p>Plan quincenal — incluye:</p>
-          <ul>
-            {caracteristicas.map((c, i) => <li key={i}>{c}</li>)}
-          </ul>
-          <div style={{ fontSize: 24, fontWeight: 900 }}>Precio: $1600</div>
+  return (
+    <div className="servicio-page">
+      <div className="servicio-hero servicio-hero--verde">
+        <div className="servicio-hero-inner">
+          <Link to="/" className="back-link">← Volver</Link>
+          <h1 className="servicio-title">Manglar Verde</h1>
+          <p className="servicio-sub">Plan quincenal — resumen</p>
 
-          <button onClick={() => setMostrarFormulario(true)} style={{ marginTop: 16 }}>Adquirir</button>
+          <div className="servicio-card">
+            <div className="servicio-card-left">
+              <h2>Perfecto para proyectos ecológicos</h2>
+              <p className="muted">Impulsa tu marca con contenido sostenible y alcance orgánico.</p>
 
-          {mostrarFormulario && (
-            <div style={{ marginTop: 16 }}>
-              <FormularioAdquisicion producto="Manglar Verde" onClose={() => setMostrarFormulario(false)} />
+              <ul className="features">
+                {caracteristicas.map((c, i) => (
+                  <li key={i}><span className="dot dot--green" />{c}</li>
+                ))}
+              </ul>
+
+              <div className="card-actions">
+                <button className="btn btn-outline" onClick={() => setMostrarDetalles(s => !s)}>
+                  {mostrarDetalles ? 'Ocultar Detalles' : 'Ver Más'}
+                </button>
+                <button className="btn btn-solid btn-green" onClick={() => setMostrarFormulario(true)}>
+                  Adquirir — $1,600
+                </button>
+              </div>
+            </div>
+
+            <div className="servicio-card-right">
+              <div className="badge">Quincenal</div>
+              <div className="price">$1,600</div>
+              <div className="illustration">🟢</div>
+            </div>
+          </div>
+
+          {mostrarDetalles && (
+            <div className="detalles">
+              <h3>Detalle del plan</h3>
+              <p>El plan incluye producción, postproducción y publicación. Se entrega material optimizado para redes.</p>
             </div>
           )}
         </div>
       </div>
-    );
-  }
 
-  return (
-    <div style={{ padding: 32 }}>
-      <Link to="/">← Volver</Link>
-      <h1 style={{ color: '#10b981' }}>Manglar Verde</h1>
-      <p>Plan quincenal — resumen</p>
-      <button onClick={() => setMostrarDetalles(true)} style={{ marginTop: 12 }}>Ver Más</button>
+      {mostrarFormulario && (
+        <div className="modal-overlay" onClick={() => setMostrarFormulario(false)}>
+          <div className="modal-body" onClick={(e) => e.stopPropagation()}>
+            <FormularioAdquisicion producto="Manglar Verde" onClose={() => setMostrarFormulario(false)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
