@@ -26,7 +26,7 @@ const ManglarRojo = () => {
           <div className="servicio-card">
             <div className="servicio-card-left">
               <div className="servicio-media">
-                <img src="/images/manglar-rojo.png" alt="Manglar Rojo" className="servicio-image" />
+                <img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\manglar-rojo.png" alt="Manglar Rojo" className="servicio-image" />
               </div>
 
               <div className="servicio-content">
