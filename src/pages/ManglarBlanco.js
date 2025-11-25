@@ -10,9 +10,7 @@ const ManglarBlanco = () => {
   const caracteristicas = [
     'Fotografía profesional (20 PZ)',
     'Página web (subdominio)',
-    'Flyers     // ...existing code...
-    <img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\manglar-blanco.png" alt="Manglar Blanco" className="servicio-image" />
-    // ...existing code...para redes (2 PZ)',
+    'Flyers para redes (2 PZ)',
     'Video (8 PZ)',
     '3 menciones en plataformas'
   ];
@@ -28,7 +26,7 @@ const ManglarBlanco = () => {
           <div className="servicio-card">
             <div className="servicio-card-left">
               <div className="servicio-media">
-                <img src="/images/manglar-blanco.png" alt="Manglar Blanco" className="servicio-image" />
+                <img src="C:\Users\carlo\OneDrive\Desktop\paginaweb_cangrejito creativo\public\manglar-blanco.png" alt="Manglar Blanco" className="servicio-image" />
               </div>
 
               <div className="servicio-content">
