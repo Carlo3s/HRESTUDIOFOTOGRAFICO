@@ -116,3 +116,125 @@ input:focus, textarea:focus, select:focus {
     transform: rotate(360deg);
   }
 }
+
+/* Navegación responsiva en móvil */
+nav {
+  display: flex;
+  gap: clamp(12px, 3vw, 24px);
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding: clamp(12px, 2vw, 16px);
+}
+
+nav a {
+  white-space: nowrap;
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 700;
+  padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 16px);
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+/* Ocultar navegación en móvil y mostrar menú hamburguesa */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 998;
+  }
+
+  nav.active {
+    max-height: 100vh;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 8px;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+    height: 3px;
+    background: #667eea;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+/* Hero section responsivo */
+.hero {
+  padding: clamp(32px, 8vw, 80px) clamp(16px, 4vw, 40px);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 8vw, 56px);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: clamp(14px, 3vw, 18px);
+  margin-bottom: 24px;
+}
+
+/* Productos grid responsivo */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 80vw, 320px), 1fr));
+  gap: clamp(16px, 4vw, 24px);
+  padding: clamp(20px, 4vw, 40px);
+}
+
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 24px 16px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}
